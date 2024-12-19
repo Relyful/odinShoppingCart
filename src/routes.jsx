@@ -1,4 +1,4 @@
-import App from "./App";
+import App from "./App/App";
 import ErrorPage from "./assets/errorPage/ErrorPage";
 
 const routes = [
