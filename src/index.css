@@ -92,6 +92,20 @@ textarea:not([rows]) {
 
 .main {
   grid-area: main;
+  display: flex;
+  justify-content: center;
+}
+
+.leftMain, .rightMain {
+  max-width: 550px;
+}
+
+.leftMain {
+  padding-top: 150px;
+}
+
+.rightMain {
+  padding-top: 350px;
 }
 
 .footer {
