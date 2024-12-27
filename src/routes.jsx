@@ -1,6 +1,6 @@
-import App from "./modules/App/App";
-import ErrorPage from "./modules/ErrorPage/ErrorPage";
-import Shop from "./modules/Shop/Shop";
+import App from "./modules/App/App"
+import ErrorPage from "./modules/ErrorPage/ErrorPage"
+import Shop from "./modules/Shop/Shop"
 
 
 const routes = [

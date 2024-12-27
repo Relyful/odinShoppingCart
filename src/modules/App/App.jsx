@@ -1,6 +1,7 @@
 import styles from './App.module.css'
 import shoppingPic from '../../assets/shopping.jpg'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 
 function App () {
@@ -16,7 +17,7 @@ function App () {
           <img src={shoppingPic} alt="people shopping" className={styles.mainPic} />
         </div>
       </main>
-      <footer className="footer">test</footer>
+      <Footer />
     </>
   )
 };
