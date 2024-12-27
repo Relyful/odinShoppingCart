@@ -18,18 +18,18 @@ const useShopData = () => {
         let shopData = await response.json();
         setData(shopData.products);
         setError(null);
-      } catch (err) {
-        setError(err.message);
+        console.log('Fetch Success');
+      } catch (err) {        
         setData(null);
         if (retryCount > 0) {
           fetchShopItems(retryCount - 1);
           console.log('Retrying...');
         } else {
-          console.log('Failed to fetch data');          
+          console.log('Failed to fetch data');
+          setError(err.message);         
         }
       } finally {
-        setLoading(false);
-        console.log('Fetch Success');        
+        setLoading(false);             
       }
     }
     fetchShopItems();
