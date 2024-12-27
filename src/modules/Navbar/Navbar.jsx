@@ -9,7 +9,9 @@ export default function Navbar () {
         <li><Link to='./'>Home</Link></li>
         <li><Link to='./Shoppingcart'>Shop</Link></li>
       </ul>
-      <img src={shoppingCart} alt="shopping cart" className={styles.cartImg} />
+      <div className="cart">        
+        <img src={shoppingCart} alt="shopping cart" className={styles.cartImg} />
+      </div>
     </nav>
   )
 }
