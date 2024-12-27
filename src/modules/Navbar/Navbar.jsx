@@ -6,8 +6,8 @@ export default function Navbar () {
   return (
     <nav className="navBar">
       <ul className={styles.list}>
-        <li><Link to='./'>Home</Link></li>
-        <li><Link to='./Shoppingcart'>Shop</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/shop'>Shop</Link></li>
       </ul>
       <div className="cart">        
         <img src={shoppingCart} alt="shopping cart" className={styles.cartImg} />
