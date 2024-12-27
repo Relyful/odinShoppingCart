@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-export default function Shop () {
+const useShopData = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
 
   useEffect(() => {
     const fetchShopItems = async (retryCount = 3) => {
@@ -21,20 +22,26 @@ export default function Shop () {
         setError(err.message);
         setData(null);
         if (retryCount > 0) {
-          console.log('Retrying...');
           fetchShopItems(retryCount - 1);
+          console.log('Retrying...');
         } else {
           console.log('Failed to fetch data');          
         }
       } finally {
-        console.log('Fetch Success');
-        
         setLoading(false);
+        console.log('Fetch Success');        
       }
     }
-
     fetchShopItems();
   }, []);
+
+  return { data, loading, error };
+};
+
+export default function Shop () {
+  const { data, loading, error } = useShopData();
+  console.log(data, loading, error);
+  
 
   return (
     <>
