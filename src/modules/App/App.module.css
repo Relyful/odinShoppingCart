@@ -5,3 +5,8 @@
 .mainPar {
   max-width: 500px;
 }
+
+.mainArea {
+  display: flex;
+  justify-content: center;
+}

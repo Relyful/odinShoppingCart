@@ -9,7 +9,7 @@ function App () {
   return (
     <>
       <Navbar />
-      <main className="main">
+      <main className={`main ${styles.mainArea}`}>
         <div className="leftMain">
           <p className={styles.mainPar}>{paragraphText}</p>
         </div>

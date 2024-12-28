@@ -92,8 +92,6 @@ textarea:not([rows]) {
 
 .main {
   grid-area: main;
-  display: flex;
-  justify-content: center;
 }
 
 .leftMain, .rightMain {
