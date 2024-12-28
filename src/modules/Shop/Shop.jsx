@@ -44,7 +44,6 @@ const useShopData = () => {
 
         setData(shopDataAmm);
         setError(null);
-        console.log('Fetch Success');
       } catch (err) {        
         setData(null);
         if (retryCount > 0) {
@@ -70,7 +69,7 @@ const ShopCards = ({ data, dataOnChange, handleInputChange }) => {
   const cards = data.map((item) => {
     return (
       <div className={styles.card} key={item.id}>
-        <h3>{item.title}</h3>
+        <h3 className={styles.overflow}>{item.title}</h3>
         <img src={item.image} className="itemPic" />
         <div className="price">{item.price}€</div>
         <div className="cartRow">
@@ -91,17 +90,14 @@ const ShopCards = ({ data, dataOnChange, handleInputChange }) => {
 export default function Shop () {
   const { data, loading, error, dataOnChange, handleInputChange } = useShopData();
   console.log(data);
-  
-
-  if (loading) return <div>Loading...</div>
-  if (error) return <div>Error: {error}</div>
-
 
   return (
     <>
       <Navbar />
       <main className={`main ${styles.main}`}>
-        <ShopCards data={data} dataOnChange={dataOnChange} handleInputChange={handleInputChange} />
+        {loading ? <div>Loading...</div>
+        : error ? <div>Error: {error}</div>
+        : <ShopCards data={data} dataOnChange={dataOnChange} handleInputChange={handleInputChange} />}
       </main>
       <Footer />
     </>
