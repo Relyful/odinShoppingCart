@@ -89,6 +89,7 @@ const ShopCards = ({ data, dataOnChange, handleInputChange }) => {
 
 export default function Shop () {
   const { data, loading, error, dataOnChange, handleInputChange } = useShopData();
+  const [cartItems, setCartItems] =  useState({});
   console.log(data);
 
   return (
