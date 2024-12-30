@@ -69,15 +69,26 @@ const useShopData = () => {
 export default function Shop () {
   const { data, loading, error, dataOnChange, handleInputChange } = useShopData();
   const [cartItems, setCartItems] =  useState({});
-  console.log(data);
+  console.log({cartItems});
+
+  const addToCart = (itemId, ammount) => {
+    setCartItems((oldCartItems) => (
+      {...oldCartItems, [itemId]: (oldCartItems[itemId] || 0) + ammount}
+    ))
+  }
+
+  const calcCartAmmount = () => {
+    let cartAmm = Object.values(cartItems).reduce((total, currentValue) => total + Number(currentValue), 0);
+    return cartAmm;
+  }
 
   return (
     <>
-      <Navbar />
+      <Navbar cartAmmount={calcCartAmmount()} />
       <main className={`main ${styles.main}`}>
         {loading ? <div>Loading...</div>
         : error ? <div>Error: {error}</div>
-        : <ShopCards data={data} dataOnChange={dataOnChange} handleInputChange={handleInputChange} />}
+        : <ShopCards data={data} dataOnChange={dataOnChange} handleInputChange={handleInputChange} addToCart={addToCart} />}
       </main>
       <Footer />
     </>

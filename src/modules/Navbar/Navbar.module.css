@@ -15,3 +15,7 @@ nav {
   gap: 30px;
   list-style-type: none;
 }
+
+.cart {
+  display: flex;
+}
