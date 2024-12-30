@@ -6,13 +6,6 @@ import Shop from './Shop'
 
 describe('Shop.jsx', () => {
   it('Should render 10 inputs 1 for each item', async () => {
-    let resolve;
-    function fetch() {
-      return new Promise(_resolve => {
-        resolve = _resolve;
-      });
-    }
-
     act(() => {
       render(
         <MemoryRouter>
