@@ -1,0 +1,9 @@
+.overflow {
+  overflow: hidden;
+  height: 120px;
+}
+
+.card {
+  max-width: 300px;
+  max-height: 500px;
+}

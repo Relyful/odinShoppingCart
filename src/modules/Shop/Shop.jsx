@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Navbar from "../Navbar/Navbar"
 import Footer from "../Footer/Footer"
+import ShopCards from "../ShopCards/ShopCards"
 import styles from "./Shop.module.css"
 
 const useShopData = () => {
@@ -64,28 +65,6 @@ const useShopData = () => {
 };
 
 
-const ShopCards = ({ data, dataOnChange, handleInputChange }) => {
-
-  const cards = data.map((item) => {
-    return (
-      <div className={styles.card} key={item.id}>
-        <h3 className={styles.overflow}>{item.title}</h3>
-        <img src={item.image} className="itemPic" />
-        <div className="price">{item.price}€</div>
-        <div className="cartRow">
-          <button type="button">Add to Cart</button>
-          <div className="ammount">
-            <button type="button" onClick={() => dataOnChange(item.id, 1)}>+</button>
-            <input type="number" value={item.cartAmmount} onChange={(e) => handleInputChange(e, item.id)} />
-            <button type="button" onClick={() => dataOnChange(item.id, -1)}>-</button>
-          </div>
-        </div>
-      </div>
-    )
-  });
-
-  return cards;
-}
 
 export default function Shop () {
   const { data, loading, error, dataOnChange, handleInputChange } = useShopData();

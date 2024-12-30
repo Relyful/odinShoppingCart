@@ -1,14 +1,5 @@
-.card {
-  max-width: 300px;
-  max-height: 500px;
-}
-
 .main {
   display: flex;
   flex-wrap: wrap;
 }
 
-.overflow {
-  overflow: hidden;
-  height: 120px;
-}
