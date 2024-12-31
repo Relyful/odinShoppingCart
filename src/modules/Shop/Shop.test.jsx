@@ -141,4 +141,18 @@ describe("Shop.jsx", () => {
     await user.keyboard('{backspace}{5}')
     expect(input.value).toBe('5');
   })
+
+  it('Snapshot correct render after fetch', async () => {
+    const { container } = render(
+      <MemoryRouter>
+        <Shop />
+      </MemoryRouter>
+    );
+
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: '+' })).toBeInTheDocument();
+    });
+
+    expect(container).toMatchSnapshot();
+  });
 });

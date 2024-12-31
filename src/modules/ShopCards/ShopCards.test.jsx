@@ -28,7 +28,6 @@ describe('ShopCards', () => {
     const data = [{title: 'wow', image: '#', id: 0, cartAmmount: 1, price: 10,}];
     render(<ShopCards data={data}/>);
     const heading = screen.getByRole('heading', { name: 'wow' });
-    console.log(heading.innerText);
     
     expect(heading.textContent).toBe('wow');
   })

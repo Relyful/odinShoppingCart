@@ -1,0 +1,98 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop.jsx > Snapshot correct render after fetch 1`] = `
+<div>
+  <nav
+    class="navBar"
+  >
+    <ul
+      class="_list_2b7a49"
+    >
+      <li>
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+    </ul>
+    <div
+      class="_cart_2b7a49"
+    >
+      0
+      <a
+        href="/"
+      >
+        <img
+          alt="shopping cart"
+          class="_cartImg_2b7a49"
+          src="/src/assets/ShoppingCart.svg"
+        />
+      </a>
+    </div>
+  </nav>
+  <main
+    class="main _main_a55e64"
+  >
+    <div
+      class="_card_641d47"
+    >
+      <h3
+        class="_overflow_641d47"
+      >
+        Product 1
+      </h3>
+      <img
+        class="itemPic"
+      />
+      <div
+        class="price"
+      >
+        24
+        €
+      </div>
+      <div
+        class="cartRow"
+      >
+        <button
+          type="button"
+        >
+          Add to Cart
+        </button>
+        <div
+          class="ammount"
+        >
+          <button
+            type="button"
+          >
+            -
+          </button>
+          <input
+            type="number"
+            value="1"
+          />
+          <button
+            type="button"
+          >
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="footer _footie_75b3b4"
+  >
+    <p>
+      Made by Relyful for The Odin Project
+    </p>
+  </footer>
+</div>
+`;

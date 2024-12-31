@@ -11,7 +11,7 @@ export default function Navbar ({ cartAmmount }) {
         <li><Link to='/shop'>Shop</Link></li>
       </ul>
       <div className={styles.cart}>
-        {cartAmmount && <span>{cartAmmount}</span>}       
+        {cartAmmount && <span data-testid="cartAmmount">{cartAmmount}</span>}       
         <Link to="#"><img src={shoppingCart} alt="shopping cart" className={styles.cartImg} /></Link>
       </div>
     </nav>
