@@ -1,4 +1,5 @@
 import styles from './ShopCards.module.css'
+import PropTypes from 'prop-types';
 
 const ShopCards = ({ data, dataOnChange, handleInputChange, addToCart }) => {
 
@@ -21,6 +22,13 @@ const ShopCards = ({ data, dataOnChange, handleInputChange, addToCart }) => {
   });
 
   return cards;
+}
+
+ShopCards.propTypes = {
+  data: PropTypes.array,
+  dataOnChange: PropTypes.func,
+  handleInputChange: PropTypes.func,
+  addToCart: PropTypes.func,
 }
 
 export default ShopCards;
