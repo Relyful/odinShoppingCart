@@ -35,14 +35,14 @@ const useShopData = () => {
     const fetchShopItems = async (retryCount = 3) => {
       try {
         const response = await fetch('https://fakestoreapi.in/api/products?limit=10', {mode: "cors"});
+                
         if (!response.ok) {
           throw new Error('Fetch Error');
         }
         let shopData = await response.json();
         const shopDataAmm = shopData.products.map((product) => ({
           ...product, cartAmmount: 1,
-        }));      
-
+        }));
         setData(shopDataAmm);
         setError(null);
       } catch (err) {        
@@ -69,7 +69,6 @@ const useShopData = () => {
 export default function Shop () {
   const { data, loading, error, dataOnChange, handleInputChange } = useShopData();
   const [cartItems, setCartItems] =  useState({});
-  console.log({cartItems});
 
   const addToCart = (itemId, ammount) => {
     setCartItems((oldCartItems) => (
