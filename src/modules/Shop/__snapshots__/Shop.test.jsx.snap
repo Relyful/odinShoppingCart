@@ -50,35 +50,39 @@ exports[`Shop.jsx > Snapshot correct render after fetch 1`] = `
         Product 1
       </h3>
       <img
-        class="itemPic"
+        class="_itemPic_641d47"
       />
       <div
-        class="price"
+        class="_price_641d47"
       >
         24
         €
       </div>
       <div
-        class="cartRow"
+        class="_cartRow_641d47"
       >
         <button
+          class="_cartButt_641d47"
           type="button"
         >
           Add to Cart
         </button>
         <div
-          class="ammount"
+          class="_ammount_641d47"
         >
           <button
+            class="_ammButt_641d47"
             type="button"
           >
             -
           </button>
           <input
+            class="_spinner_641d47"
             type="number"
             value="1"
           />
           <button
+            class="_ammButt_641d47"
             type="button"
           >
             +

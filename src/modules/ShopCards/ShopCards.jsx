@@ -7,14 +7,14 @@ const ShopCards = ({ data, dataOnChange, handleInputChange, addToCart }) => {
     return (
       <div className={styles.card} key={item.id}>
         <h3 className={styles.overflow}>{item.title}</h3>
-        <img src={item.image} className="itemPic" />
-        <div className="price">{item.price}€</div>
-        <div className="cartRow">
-          <button type="button" onClick={() => addToCart(item.id, item.cartAmmount)}>Add to Cart</button>
-          <div className="ammount">
-            <button type="button" onClick={() => dataOnChange(item.id, -1)}>-</button>
-            <input type="number" value={item.cartAmmount} onChange={(e) => handleInputChange(e, item.id)} />
-            <button type="button" onClick={() => dataOnChange(item.id, 1)}>+</button>
+        <img src={item.image} className={styles.itemPic} />
+        <div className={styles.price}>{item.price}€</div>
+        <div className={styles.cartRow}>
+          <button className={styles.cartButt}type="button" onClick={() => addToCart(item.id, item.cartAmmount)}>Add to Cart</button>
+          <div className={styles.ammount}>
+            <button className={styles.ammButt} type="button" onClick={() => dataOnChange(item.id, -1)}>-</button>
+            <input type="number" className={styles.spinner} value={item.cartAmmount} onChange={(e) => handleInputChange(e, item.id)} />
+            <button className={styles.ammButt} type="button" onClick={() => dataOnChange(item.id, 1)}>+</button>
           </div>
         </div>
       </div>
